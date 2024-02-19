@@ -1,38 +1,109 @@
-.App {
-  text-align: center;
+*{
+  box-sizing: border-box
+  ;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app-window {
+  display: flex;
+  height: 100vh;
+  background-color: #f4f4f4;
+  border-right: 1px solid #d3d3d3;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.sidebar{
   display: flex;
   flex-direction: column;
+  max-width:414px;
+  width:  35%;
+  height: 100%;
+  border-right: 1px solid #d3d3d3;
+  background-color: #fff;
+}
+header{
+  display: flex;
+  align-items: center;
+    justify-content: space-between;
+  height: 60px;
+  padding: 0 10px;
+}
+.header--avatar{
+  border-radius: 20px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.header--buttons{
+  display: flex;
+
+}
+.header--btn{
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+
+.contentarea{
+  flex: 1;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+
+.search{
+  padding: 5px 15px;
+  border-bottom: 1px solid #d3d3d3;
+}
+
+.search--input{
+  width: 100%;
+  height: 40px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  padding: 0 10px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  baackground-color: #f4f4f4;
+}
+
+.search--input input{
+  flex:1;
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  padding: 0 10px;
+  border-radius: 20px;
+  baackground-color:transparent;
+}
+.chatlist {
+  flex: 1;
+  background-color: #FFF;
+  overflow: auto;
+}
+.chatlist::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.chatlist::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.contentarea {
+  flex: 1;
 }
